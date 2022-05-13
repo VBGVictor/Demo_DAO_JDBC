@@ -1,5 +1,6 @@
 package Application;
 
+import java.util.Date;
 import java.util.List;
 
 import Model.entities.Departamento;
@@ -30,6 +31,11 @@ public class Programa {
 		for(Vendedor obj : list) {
 			System.out.println(obj);
 		}
+		
+		System.out.println("=== TESTE 4: Vendedor Insert ===");
+		Vendedor newVendedor = new Vendedor(null, "Greg", "Greg@gmail.com", new Date(), 4000.0, departamento);
+		vendedorDao.insert(newVendedor);
+		System.out.println("Inserted! New id = " + newVendedor.getId());
 
 	}
 
